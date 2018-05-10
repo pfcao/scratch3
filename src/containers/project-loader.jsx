@@ -9,8 +9,7 @@ import {
 } from '../reducers/modals';
 
 import PouchDB from 'pouchdb';
-window.pouch = PouchDB
-window.db = new PouchDB('scratch0')
+const db = new PouchDB('scratch0')
 
 class ProjectLoader extends React.Component {
     constructor (props) {
@@ -54,7 +53,6 @@ class ProjectLoader extends React.Component {
                 // reader.result contains the contents of blob as a typed array
                 this.props.vm.loadProject(reader.result)
                 .then(() => {
-                    this.props.closeLoadingState();
                     // Reset the file input after project is loaded
                     // This is necessary in case the user wants to reload a project
                 })

@@ -2,9 +2,8 @@ import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PouchDB from 'pouchdb';
 
-window.pouch = PouchDB
+import PouchDB from 'pouchdb';
 window.db = new PouchDB('scratch0')
 
 class ProjectSaver extends React.Component {
@@ -25,7 +24,7 @@ class ProjectSaver extends React.Component {
             // File name: project-DATE-TIME
             const date = new Date();
             const timestamp = `${date.toLocaleDateString()}-${date.toLocaleTimeString()}`;
-            db.putAttachment('doc', 'att.sb3',
+            db.putAttachment('doc', `att.sb3`,
             doc._rev,
             content, 'application/zip')
 
