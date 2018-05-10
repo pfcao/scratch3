@@ -1,0 +1,13 @@
+image: node:latest
+cache:
+  paths:
+  - node_modules/
+pages:
+  script:
+  - yarn install
+  - yarn build
+  artifacts:
+    paths:
+    - build
+  only:
+  - master
