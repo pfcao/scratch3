@@ -128,14 +128,14 @@ const MenuBar = props => (
                         <MenuItemTooltip id="new">
                             <MenuItem>New</MenuItem>
                         </MenuItemTooltip>
-                        <MenuSection>
+                        {/* <MenuSection>
                             <MenuItemTooltip id="save">
                                 <MenuItem>Save now</MenuItem>
                             </MenuItemTooltip>
                             <MenuItemTooltip id="copy">
                                 <MenuItem>Save as a copy</MenuItem>
                             </MenuItemTooltip>
-                        </MenuSection>
+                        </MenuSection> */}
                         <MenuSection>
                             <ProjectLoader>{(renderFileInput, loadProject, loadProps) => (
                                 <MenuItem
